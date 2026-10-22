@@ -107,7 +107,25 @@
                             </tr>
                         </thead>
                         <tbody id="tabel-body-mahasiswa">
-                            <!-- Baris tabel akan di-generate secara dinamis oleh app.js -->
+                            <td><strong><?= htmlspecialchars($mhs['npm])?></strong></td>
+                            <td><?=htmlspecialchars($mhs ['name']) ?></td>
+                            <td><span class="badge"><?=
+                            htmlspecialchars($mhs['program_studi']) ?></span></td>
+                            <td><?htmlspecialchars($mhs['angkatan']
+                            ?></td>
+                            <td><a href="mailto:<?= 
+                            htmlspecialchars($mhs['email']) ?>" class="link-email"><?=
+                        htmlspecialchars($mhs['email']) ?></a></td>
+                            <td>
+                                <tr>
+                                    <td colspan="8" class = "empty-row">
+                                        <?= !empty($keyword)
+                                        ? 'Tidak ditemkan data mahasiswa dengan kata kunci"' . htmlspecialchars($keyword) . '".'
+                                        : 'Belum ada data mahasiswa yang tersimpan.' ?>
+                                        
+                                    </td>
+                                </tr>
+                            </td><!-- Baris tabel akan di-generate secara dinamis oleh app.js -->
                         </tbody>
                     </table>
                 </div>
